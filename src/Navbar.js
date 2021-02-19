@@ -8,7 +8,6 @@ const Navbar = () => {
   const displaySubmenu = (e) => {
     const page = e.target.textContent;
     const tempBtn = e.target.getBoundingClientRect();
-    console.log(tempBtn);
     const center = (tempBtn.left + tempBtn.right) / 2;
     const bottom = tempBtn.bottom - 3;
     openSubmenu(page, { center, bottom });
@@ -40,9 +39,7 @@ const Navbar = () => {
             </button>
           </li>
         </ul>
-        <button className='btn signin-btn' onMouseOver={displaySubmenu}>
-          sign in
-        </button>
+        <button className='btn signin-btn'>sign in</button>
       </div>
     </nav>
   );
